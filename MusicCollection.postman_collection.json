@@ -1,0 +1,210 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Music Collection",
+		"_postman_id": "dcd57a32-0af3-da38-2616-bf6349ad8db5",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add artist",
+			"request": {
+				"url": "http://localhost:10001/artists",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Pink Floyd\",\"genre\":\"Progressive Rock\",\"url1\":\"http://www.progarchives.com/artist.asp?id=364\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "add other artist",
+			"request": {
+				"url": "http://localhost:10001/artists",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Ayreon\",\"genre\":\"Progressive Rock\",\"url1\":\"http://www.progarchives.com/artist.asp?id=34\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "add album",
+			"request": {
+				"url": "http://localhost:10002/albums",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Dark Side Of The Moon\",\"artist\":\"587fcb341d5b0d3978d6ef3c\",\"url1\":\"http://www.progarchives.com/album.asp?id=1440\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "add album using proxy",
+			"request": {
+				"url": "http://localhost:8080/albums",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Animals\",\"artist\":\"587fcb341d5b0d3978d6ef3c\",\"url1\":\"http://www.progarchives.com/album.asp?id=1442\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "add track using proxy",
+			"request": {
+				"url": "http://localhost:8080/tracks",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Eclipse\",\"album\":\"5880edbd1d5b0d009ced370e\",\"url1\":\"Pink_Floyd/Dark_Side_Of_The_Moon/Eclipse.mp3\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "artist search by id",
+			"request": {
+				"url": "http://localhost:10001/artists/search/byId?id=587fcc0c1d5b0d3978d6ef3d",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "artist search by name",
+			"request": {
+				"url": "http://localhost:10001/artists/search/byName?name=Pink%20Floyd",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "search artist by name in proxy server",
+			"request": {
+				"url": "http://localhost:8080/artists/search/byName?name=Pink%20Floyd",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "find album by id using proxy",
+			"request": {
+				"url": "http://localhost:8080/albums/search/byId?id=5880edbd1d5b0d009ced370e",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "find album by name using proxy",
+			"request": {
+				"url": "http://localhost:8080/albums/search/byName?name=Animals",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "find album by artist using artist id",
+			"request": {
+				"url": "http://localhost:10002/albums/search/byArtist?artist=587fcb341d5b0d3978d6ef3c",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getTrackById",
+			"request": {
+				"url": "http://localhost:8080/tracks/search/byId?id=5880f7eb1d5b0d36d0227bbb",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get track by name",
+			"request": {
+				"url": "http://localhost:8080/tracks/search/byName?name=Eclipse",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get track by album id",
+			"request": {
+				"url": "http://localhost:8080/tracks/search/byAlbum?album=5880edbd1d5b0d009ced370e",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
