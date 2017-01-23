@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <title>AngularJS $http Service</title>
+</head>
+<body>
+  <div ng-controller="myController">
+    <h2>Search Artist/Album/Tracks</h2><br>
+    <input type="text" ng-model="searchValue"><br>
+    <input type="button" ng-click="getArtistByName(searchValue)"
+           value="Get Artist"/><br>
+    <input type="button" ng-click="getAlbumByName(searchValue)"
+           value="Get Album"/><br>
+    <input type="button" ng-click="getTrackByName(searchValue)"
+           value="Get Track"/><br>
+    <input type="button" ng-click="getArtistById(searchValue)"
+           value="Get Artist With Id"/><br>
+    <input type="button" ng-click="getAlbumById(searchValue)"
+           value="Get Album With Id"/><br>
+    <input type="button" ng-click="getTrackById(searchValue)"
+           value="Get Track With Id"/><br>
+    <input type="button" ng-click="getAlbumByArtistId(searchValue)"
+           value="Get Album With Artist Id"/><br>
+    <input type="button" ng-click="getTrackByAlbumId(searchValue)"
+           value="Get Track With Album Id"/><br>
+    {{data}}
+  </div>
+  <script src="http://code.angularjs.org/1.3.0/angular.min.js"></script>
+  <script src="js/service_http.js"></script>
+</body>
+</html>

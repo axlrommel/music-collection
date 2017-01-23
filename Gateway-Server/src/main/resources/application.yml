@@ -1,0 +1,15 @@
+zuul:
+  ignored-services: '*'
+  
+  routes:
+    Artist-Domain-Service:
+      path: /artists/**
+      url: http://localhost:10001/artists
+      
+    Album-Domain-Service:
+      path: /albums/**
+      url: http://localhost:10002/albums
+      
+    Track-Domain-Service:
+      path: /tracks/**
+      url: http://localhost:10003/tracks
