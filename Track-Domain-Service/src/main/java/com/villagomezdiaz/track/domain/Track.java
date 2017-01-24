@@ -1,7 +1,9 @@
 package com.villagomezdiaz.track.domain;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection="tracks")
 public class Track {
 
 	@Id

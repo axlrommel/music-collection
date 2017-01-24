@@ -10,13 +10,13 @@ import com.villagomezdiaz.track.domain.Track;
 
 public interface TrackRepository extends MongoRepository<Track, String> {
 	
-	@RestResource(path = "byName", rel = "track")
+	@RestResource(path = "byName", rel = "tracks")
 	public Page<Track> findByName(@Param("name") String name, Pageable p);
 
-    @RestResource(path = "byId", rel = "track")
+    @RestResource(path = "byId", rel = "tracks")
     public Page<Track> findById(@Param("id") String id, Pageable p);
     
-    @RestResource(path = "byAlbum", rel = "track")
+    @RestResource(path = "byAlbum", rel = "tracks")
     public Page<Track> findByAlbum(@Param("album") String album, Pageable p);
     
 
