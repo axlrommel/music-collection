@@ -10,13 +10,13 @@ import com.villagomezdiaz.service.album.domain.Album;
 
 public interface AlbumRepository extends MongoRepository<Album, String> {
 	
-	@RestResource(path = "byName", rel = "album")
+	@RestResource(path = "byName", rel = "albums")
 	public Page<Album> findByName(@Param("name") String name, Pageable p);
 
-    @RestResource(path = "byId", rel = "album")
+    @RestResource(path = "byId", rel = "albums")
     public Page<Album> findById(@Param("id") String id, Pageable p);
     
-    @RestResource(path = "byArtist", rel = "album")
+    @RestResource(path = "byArtist", rel = "albums")
     public Page<Album> findByArtist(@Param("artist") String artist, Pageable p);
 
 }
