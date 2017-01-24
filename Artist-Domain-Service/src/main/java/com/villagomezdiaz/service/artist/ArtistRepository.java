@@ -9,9 +9,9 @@ import com.villagomezdiaz.service.artist.domain.Artist;
 
 public interface ArtistRepository extends MongoRepository<Artist, String> {
 
-	@RestResource(path = "byName", rel = "artist")
+	@RestResource(path = "byName", rel = "artists")
 	Artist findByName(@Param("name") String name);
 
-    @RestResource(path = "byId", rel = "artist")
+    @RestResource(path = "byId", rel = "artists")
     Artist findById(@Param("id") String id);
 }
